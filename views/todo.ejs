@@ -1,0 +1,10 @@
+<form method="POST">
+    <input type="text" name="text" required>
+    <button type="submit">Add Task</button>
+  </form>
+  <ul>
+    <% tasks.forEach(task => { %>
+      <li><%= task.text %> <form method="POST" action="/todo/delete/<%= task._id %>"><button type="submit">Delete</button></form></li>
+    <% }) %>
+  </ul>
+  
